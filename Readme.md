@@ -13,7 +13,7 @@ Check appsettings to define the folder that contains the library and the connect
 Indexname: booksearch
 Mapping: booksearch
 
-'
+```javascript
  {
     "settings": {
         "analysis": {
@@ -51,7 +51,7 @@ Mapping: booksearch
     }
 } 	 
 }
-'
+```
 
 ## Licence
 
