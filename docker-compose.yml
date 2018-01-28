@@ -1,0 +1,15 @@
+version: '2.2'
+
+services:
+   
+    es:
+        image: docker.elastic.co/elasticsearch/elasticsearch:6.1.1
+        restart: on-failure:3 # try to restart on failure for 3 times        
+        ports:
+            - 9200:9200
+        hostname: ElasticSearch
+        networks:
+            - ebook-net     
+networks:
+    ebook-net:
+            

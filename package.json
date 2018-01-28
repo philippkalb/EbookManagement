@@ -1,0 +1,78 @@
+{
+  "requires": true,
+  "lockfileVersion": 1,
+  "dependencies": {
+    "@aspnet/signalr-client": "^1.0.0-alpha2-final",
+    "bl": {
+      "integrity": "sha1-ysMo977kVzDUBLaSID/LWQ4XLV4=",
+      "requires": {
+        "readable-stream": "2.3.3"
+      },
+      "resolved": "https://registry.npmjs.org/bl/-/bl-1.2.1.tgz",
+      "version": "1.2.1"
+    },
+    "core-util-is": {
+      "integrity": "sha1-tf1UIgqivFq1eqtxQMlAdUUDwac=",
+      "resolved": "https://registry.npmjs.org/core-util-is/-/core-util-is-1.0.2.tgz",
+      "version": "1.0.2"
+    },
+    "inherits": {
+      "integrity": "sha1-Yzwsg+PaQqUC9SRmAiSA9CCCYd4=",
+      "resolved": "https://registry.npmjs.org/inherits/-/inherits-2.0.3.tgz",
+      "version": "2.0.3"
+    },
+    "isarray": {
+      "integrity": "sha1-u5NdSFgsuhaMBoNJV6VKPgcSTxE=",
+      "resolved": "https://registry.npmjs.org/isarray/-/isarray-1.0.0.tgz",
+      "version": "1.0.0"
+    },
+    "msgpack5": {
+      "integrity": "sha512-6HuCZHA57WtNUzrKIvjJ8OMxigzveJ6D5i13y6TsgGu3X3zxABpuBvChpppOoGdB9SyWZcmqUs1fwUV/PpSQ7Q==",
+      "requires": {
+        "bl": "1.2.1",
+        "inherits": "2.0.3",
+        "readable-stream": "2.3.3",
+        "safe-buffer": "5.1.1"
+      },
+      "resolved": "https://registry.npmjs.org/msgpack5/-/msgpack5-3.6.0.tgz",
+      "version": "3.6.0"
+    },
+    "process-nextick-args": {
+      "integrity": "sha1-FQ4gt1ZZCtP5EJPyWk8q2L/zC6M=",
+      "resolved": "https://registry.npmjs.org/process-nextick-args/-/process-nextick-args-1.0.7.tgz",
+      "version": "1.0.7"
+    },
+    "readable-stream": {
+      "integrity": "sha512-m+qzzcn7KUxEmd1gMbchF+Y2eIUbieUaxkWtptyHywrX0rE8QEYqPC07Vuy4Wm32/xE16NcdBctb8S0Xe/5IeQ==",
+      "requires": {
+        "core-util-is": "1.0.2",
+        "inherits": "2.0.3",
+        "isarray": "1.0.0",
+        "process-nextick-args": "1.0.7",
+        "safe-buffer": "5.1.1",
+        "string_decoder": "1.0.3",
+        "util-deprecate": "1.0.2"
+      },
+      "resolved": "https://registry.npmjs.org/readable-stream/-/readable-stream-2.3.3.tgz",
+      "version": "2.3.3"
+    },
+    "safe-buffer": {
+      "integrity": "sha512-kKvNJn6Mm93gAczWVJg7wH+wGYWNrDHdWvpUmHyEsgCtIwwo3bqPtV4tR5tuPaUhTOo/kvhVwd8XwwOllGYkbg==",
+      "resolved": "https://registry.npmjs.org/safe-buffer/-/safe-buffer-5.1.1.tgz",
+      "version": "5.1.1"
+    },
+    "string_decoder": {
+      "integrity": "sha512-4AH6Z5fzNNBcH+6XDMfA/BTt87skxqJlO0lAh3Dker5zThcAxG6mKz+iGu308UKoPPQ8Dcqx/4JhujzltRa+hQ==",
+      "requires": {
+        "safe-buffer": "5.1.1"
+      },
+      "resolved": "https://registry.npmjs.org/string_decoder/-/string_decoder-1.0.3.tgz",
+      "version": "1.0.3"
+    },
+    "util-deprecate": {
+      "integrity": "sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=",
+      "resolved": "https://registry.npmjs.org/util-deprecate/-/util-deprecate-1.0.2.tgz",
+      "version": "1.0.2"
+    }
+  }
+}

@@ -1,0 +1,64 @@
+﻿@model BookListViewModel
+@{
+    ViewData["Title"] = "Ebook Bibliothek";
+    var listselector = "js-list";
+}
+
+
+<div class="row" style="margin-top:30px">
+    <form class="form-group" role="form" id="booksearch">
+        <div class=" col-md-10 col-xs-10">
+            <div class="form-group">
+                <label class="sr-only" for="exampleInputEmail">Email address</label>
+                <input type="text" class="form-control" id="searchValue" placeholder="Suche nach Author, Title oder Tags">
+            </div>
+        </div>
+        <div class=" col-md-2 col-xs-2">
+            <input type="image" name="submit" src="~/images/search.jpg" border="0" alt="Submit" />
+        </div>
+
+    </form>
+</div>
+<div class="row">
+    <table class="@listselector"></table>
+</div>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        var downloadLink = '@Url.Action("Download", "Home", new { id = "__param__" })';
+        var searchLink = '@Url.Action("Search", "Home", new { searchValue = "__param__" })';
+
+        $("#booksearch").submit(function (event) {
+            // cancels the form submission
+            event.preventDefault();
+            $.ajax({
+                type: "POST",
+                url: searchLink.replace("__param__", $("#searchValue").val()),
+                dataType: "json",
+                success: function (data) {
+                    $('.@listselector').empty();
+                    $('.@listselector').append("<caption > angezeigt " + data.displayed + " von " + data.maxCount + "</caption >");
+                    for (i = 0; i < data.books.length; i++) {
+
+                        var images = '<img width="60" src=\"' + data.books[i].image + "\"/>";
+                        var row = "<tr><td>" + images + "</td><td style=\"padding:0 15px 0 15px;\"><span class=\"bold_styling\">" + data.books[i].author +
+                            "</span><br \>  " + data.books[i].title + ' </td><td> <a href=\"'
+                            + downloadLink.replace("__param__", data.books[i].id) + "\"  > download </a></td></tr>"
+
+                        $('.@listselector').append(row);
+                   }
+                }, //End of AJAX Success function
+                failure: function (data) {
+                    alert(data.responseText);
+                }, //End of AJAX failure function
+                error: function (data) {
+                    alert(data.responseText);
+                } //End of AJAX error function
+
+            });
+        });
+    });
+</script>
+
+
